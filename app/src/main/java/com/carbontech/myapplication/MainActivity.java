@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         times_table_content = new ArrayList<String>();
 
         for (int i = 1; i <= 10; i++){
-            times_table_content.add(Integer.toString(i * times_table_postition));
+            times_table_content.add(Integer.toString(times_table_postition) + " * " + Integer.toString(i) +  " = " + Integer.toString(i * times_table_postition));
         }
 
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_activated_1, times_table_content);
@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 generateTimesTable(times_table_postition);
-
             }
 
             @Override
